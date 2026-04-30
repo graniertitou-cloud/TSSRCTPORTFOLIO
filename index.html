@@ -4,21 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TSSRCT · Pitch 2026</title>
-<meta name="description" content="TSSRCT — A multidisciplinary platform for music, visual art, fashion, design and technology. Built by Hadone & UFO95.">
+<meta name="description" content="TSSRCT. A multidisciplinary platform for music, visual art, fashion, design and technology. Built by Hadone and UFO95.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="favicon.svg">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TSSRCT">
 <meta property="og:title" content="TSSRCT · Pitch 2026">
-<meta property="og:description" content="A multidisciplinary platform pushing beyond techno — music, visual art, fashion, design, technology.">
+<meta property="og:description" content="A multidisciplinary platform pushing beyond techno. Music, visual art, fashion, design, technology.">
 <meta property="og:image" content="images/duo-1.jpg">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TSSRCT · Pitch 2026">
-<meta name="twitter:description" content="A multidisciplinary platform pushing beyond techno — music, visual art, fashion, design, technology.">
+<meta name="twitter:description" content="A multidisciplinary platform pushing beyond techno. Music, visual art, fashion, design, technology.">
 
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="dns-prefetch" href="https://api.web3forms.com">
@@ -34,7 +33,6 @@
 <script defer src="scripts/slide-nav.js"></script>
 <script defer src="scripts/pdf-export.js"></script>
 
-<!-- Apply theme before first paint -->
 <script>
 (function(){try{var t=localStorage.getItem('tssrct-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(_){}})();
 </script>
@@ -42,14 +40,14 @@
 <body>
 
 <div class="nav-arrows" aria-label="Slide navigation" data-fr-aria-label="Navigation entre les slides">
-  <button class="nav-arrow" id="nav-prev" aria-label="Previous slide" data-fr-aria-label="Slide précédente" title="Previous (↑ / ←)" data-fr-title="Précédent (↑ / ←)">↑</button>
-  <button class="nav-arrow" id="nav-next" aria-label="Next slide" data-fr-aria-label="Slide suivante" title="Next (↓ / → / Space)" data-fr-title="Suivant (↓ / → / Espace)">↓</button>
+  <button class="nav-arrow" id="nav-prev" aria-label="Previous slide" data-fr-aria-label="Slide précédente" title="Previous" data-fr-title="Précédent">↑</button>
+  <button class="nav-arrow" id="nav-next" aria-label="Next slide" data-fr-aria-label="Slide suivante" title="Next" data-fr-title="Suivant">↓</button>
 </div>
 
 <div class="pdf-loading" id="pdf-loading" role="status" aria-live="polite">
   <button class="pdf-loading-close" type="button" onclick="closePDFLoader()" aria-label="Close" data-fr-aria-label="Fermer">×</button>
   <div class="spinner" aria-hidden="true"></div>
-  <div class="pdf-loading-kicker">TSSRCT · Pitch 2026</div>
+  <div class="pdf-loading-kicker">TSSRCT · PITCH 2026</div>
   <div class="pdf-loading-title" id="pdf-loading-title">The PDF is downloading</div>
   <div class="pdf-loading-step" id="pdf-loading-text">Preparing assets</div>
   <div class="pdf-loading-progress" id="pdf-loading-progress"></div>
@@ -69,7 +67,7 @@
   <div class="modal-box">
     <button class="modal-close" type="button" onclick="closeContactModal()" aria-label="Close" data-fr-aria-label="Fermer">×</button>
     <div class="modal-label" data-fr="Contact partenariat">Partnership inquiry</div>
-    <div class="modal-title" id="modal-title" data-fr="Discutons-en">Let's talk</div>
+    <div class="modal-title" id="modal-title" data-fr="Discutons">Let's talk</div>
     <p class="modal-body" data-fr="Laissez vos coordonnées. Nous revenons vers vous sous 48 heures.">Drop your details. We'll reply within 48 hours.</p>
     <form id="contact-form" onsubmit="submitContactForm(event)">
       <div class="modal-field">
@@ -94,17 +92,23 @@
   </div>
 </div>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗
-     ║ 01 · COVER                                                   ║
-     ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ─── 01 · COVER ────────────────────────────────────────────── -->
 <section class="slide">
   <div class="meta-bar">
     <span>TSSRCT · 2026</span>
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>01 / 07</span>
   </div>
-  <div class="cover-wrap">
+  <div class="cover-frame">
     <h1 class="cover-mark">TSSRCT</h1>
-    <p class="cover-tagline" data-fr="Une plateforme multidisciplinaire qui dépasse les codes de la techno — musique, art, mode, design, technologie.">A multidisciplinary platform pushing beyond techno — music, art, fashion, design, technology.</p>
+    <p class="cover-meta" data-fr="Une plateforme multidisciplinaire qui dépasse les codes de la techno. Musique, art visuel, mode, design, technologie.">A multidisciplinary platform pushing beyond techno. Music, visual art, fashion, design, technology.</p>
+    <div class="cover-side">
+      <dl>
+        <dt data-fr="Édition">Edition</dt><dd>2026</dd>
+        <dt data-fr="Format">Format</dt><dd>Pitch</dd>
+        <dt data-fr="Direction">Direction</dt><dd>Hadone × UFO95</dd>
+        <dt data-fr="Pages">Pages</dt><dd>07</dd>
+      </dl>
+    </div>
   </div>
   <div class="foot-bar">
     <span data-fr="Pitch · Édition 2026">Pitch · Edition 2026</span>
@@ -112,98 +116,116 @@
   </div>
 </section>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗
-     ║ 02 · VISION / CONCEPT                                        ║
-     ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ─── 02 · VISION / CONCEPT ─────────────────────────────────── -->
 <section class="slide">
   <div class="meta-bar">
     <span data-fr="02 · Vision · Concept">02 · Vision · Concept</span>
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>02 / 07</span>
   </div>
-  <div class="middle wide">
+  <div class="frame flush">
     <span class="kicker" data-fr="Reach · Objectifs">Reach · Goals · Objectives</span>
-    <h2 class="title-1" data-fr="Un tesseract — une réalité au-delà du visible.">A tesseract — a reality beyond what we can see.</h2>
-    <div class="vision-grid">
-      <div class="vision-col">
-        <span class="vc-num">01 · Concept</span>
-        <p data-fr="TSSRCT s’inspire du tesseract, structure mathématique réelle mais inaccessible à la perception humaine. Symbole d’une réalité qui existe au-delà de ce que l’on voit. À travers ce concept, TSSRCT explore des formes de création qui dépassent les frontières traditionnelles de la musique et de la culture club.">TSSRCT draws inspiration from the tesseract — a real mathematical structure that remains inaccessible to human perception, symbolizing a reality that exists beyond what we can see. Through this concept, TSSRCT explores forms of creation that transcend the traditional boundaries of music and club culture.</p>
+    <h2 class="title-1" data-fr="Un tesseract.&nbsp;Une réalité au-delà du visible.">A tesseract.&nbsp;A reality beyond the visible.</h2>
+    <div class="media-split">
+      <div class="copy">
+        <div class="vision-stack">
+          <div class="vision-row">
+            <span class="num">01</span>
+            <p data-fr="TSSRCT s’inspire du tesseract, structure mathématique réelle qui reste inaccessible à la perception humaine. Symbole d’une réalité qui existe au-delà de ce que l’on voit.">TSSRCT draws inspiration from the tesseract, a real mathematical structure that remains inaccessible to human perception. A symbol of a reality that exists beyond what we can see.</p>
+          </div>
+          <div class="vision-row">
+            <span class="num">02</span>
+            <p data-fr="Plus qu’un label, une plateforme multidisciplinaire qui dépasse les codes de la techno. Musique, art visuel, mode, design, technologie.">More than a label, a multidisciplinary platform pushing beyond techno. Music, visual art, fashion, design, technology.</p>
+          </div>
+          <div class="vision-row">
+            <span class="num">03</span>
+            <p data-fr="Forte d’une décennie d’expérience, Hadone et UFO95 portent cette vision avec une légitimité artistique solide et la capacité de passer à l’échelle.">Backed by a decade in the industry, Hadone and UFO95 carry this vision with artistic legitimacy and the ability to scale.</p>
+          </div>
+        </div>
       </div>
-      <div class="vision-col">
-        <span class="vc-num">02 · Platform</span>
-        <p data-fr="Plus qu’un label, une plateforme multidisciplinaire visant à dépasser les codes de la techno, en créant des passerelles entre musique, art visuel, mode, design et technologie. L’ambition : bâtir un écosystème global de promotion et de distribution, et développer des événements de plus en plus ambitieux pour un public exigeant.">More than a label, a multidisciplinary platform aimed at pushing beyond the codes of techno by creating connections between music, visual art, fashion, design, and technology. Its ambition is to build a global ecosystem for promotion and distribution, while developing increasingly ambitious events for a curated and discerning audience.</p>
-      </div>
-      <div class="vision-col">
-        <span class="vc-num">03 · Founders</span>
-        <p data-fr="Forte d’une décennie d’expérience dans l’industrie, Hadone et UFO95 portent cette vision avec une légitimité artistique solide et la capacité de la déployer durablement à plus grande échelle.">Backed by over a decade of experience in the industry, Hadone and UFO95 carry this vision with strong artistic legitimacy and the ability to scale it sustainably to a broader level.</p>
+      <div class="media-mosaic">
+        <div class="media-cell span-2" onclick="openMedia('image','images/release-freedom-still.jpg')">
+          <img src="images/release-freedom-still.jpg" alt="Freedom · TSSRCT release still" data-fr-alt="Freedom · still de la sortie TSSRCT">
+          <span class="media-cell-label">Freedom</span>
+        </div>
+        <div class="media-cell" onclick="openMedia('image','images/release-mockup.jpg')">
+          <img src="images/release-mockup.jpg" alt="TSSRCT mockup" data-fr-alt="Mockup TSSRCT">
+          <span class="media-cell-label">Mockup</span>
+        </div>
+        <div class="media-cell" onclick="openMedia('image','images/release-limited.png')">
+          <img src="images/release-limited.png" alt="Limited edition" data-fr-alt="Édition limitée">
+          <span class="media-cell-label">Limited</span>
+        </div>
       </div>
     </div>
   </div>
   <div class="foot-bar">
     <span data-fr="Au-delà du club">Beyond the club</span>
-    <span data-fr="Hadone · UFO95">Hadone · UFO95</span>
+    <span>Hadone · UFO95</span>
   </div>
 </section>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗
-     ║ 03 · RECAPS / METRICS                                        ║
-     ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ─── 03 · RECAPS / METRICS ─────────────────────────────────── -->
 <section class="slide">
   <div class="meta-bar">
     <span data-fr="03 · Recaps · Indicateurs">03 · Recaps · Metrics</span>
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>03 / 07</span>
   </div>
-  <div class="middle wide">
+  <div class="frame">
     <span class="kicker" data-fr="Trajectoire · Crédibilité">Track Record · Credibility</span>
-    <h2 class="title-1" data-fr="Releases · Showcases · Network.">Releases · Showcases · Network.</h2>
-    <div class="recap-list">
-      <div class="recap-row">
+    <h2 class="title-1">Releases.&nbsp;Showcases.&nbsp;Network.</h2>
+    <div class="recaps">
+      <div class="recap">
         <div class="recap-num">01</div>
         <div>
           <div class="recap-title" data-fr="Releases">Releases</div>
-          <p class="recap-body" data-fr="Production constante et reconnue via Bandcamp, à la croisée des scènes club et expérimentale.">Strong and consistent output via Bandcamp, bridging club and experimental scenes.</p>
-          <div class="recap-tags" data-fr="À venir : Dasha Rush (Ambient — Oct) · Kangding Ray / Tauceti (Déc) · Hadone (Jan) · Oscar Mulero (Fév) · UFO95 (Avr)">Upcoming: Dasha Rush (Ambient — Oct) · Kangding Ray / Tauceti (Dec) · Hadone (Jan) · Oscar Mulero (Feb) · UFO95 (Apr)</div>
+        </div>
+        <div class="recap-body">
+          <p data-fr="Production constante et reconnue via Bandcamp, à la croisée des scènes club et expérimentale.">Strong and consistent output via Bandcamp, bridging club and experimental scenes.</p>
+          <div class="recap-tags" data-fr="À venir : Dasha Rush (Ambient · Oct) · Kangding Ray / Tauceti (Déc) · Hadone (Jan) · Oscar Mulero (Fév) · UFO95 (Avr)">Upcoming · Dasha Rush (Ambient · Oct) · Kangding Ray / Tauceti (Dec) · Hadone (Jan) · Oscar Mulero (Feb) · UFO95 (Apr)</div>
         </div>
       </div>
-      <div class="recap-row">
+      <div class="recap">
         <div class="recap-num">02</div>
         <div>
           <div class="recap-title" data-fr="Showcases internationaux">Global showcases</div>
-          <p class="recap-body" data-fr="Présence internationale dans les hubs culturels majeurs.">International presence across key cultural hubs.</p>
-          <div class="recap-tags" data-fr="Passés : KALT · BASIS · Fuse · Montréal · Medellín · Paris · Lyon · Los Angeles · À venir : Razzmatazz · Basement · Lofi · Radion · Artheater · Dubaï · Bozar · Nantes · Bruxelles · Tresor">Past: KALT · BASIS · Fuse · Montreal · Medellín · Paris · Lyon · Los Angeles — Upcoming: Razzmatazz · Basement · Lofi · Radion · Artheater · Dubai · Bozar · Nantes · Brussels · Tresor</div>
+        </div>
+        <div class="recap-body">
+          <p data-fr="Présence internationale dans les hubs culturels majeurs.">International presence across key cultural hubs.</p>
+          <div class="recap-tags" data-fr="Passés · KALT · BASIS · Fuse · Montréal · Medellín · Paris · Lyon · Los Angeles &nbsp;·&nbsp; À venir · Razzmatazz · Basement · Lofi · Radion · Artheater · Dubaï · Bozar · Nantes · Bruxelles · Tresor">Past · KALT · BASIS · Fuse · Montreal · Medellín · Paris · Lyon · Los Angeles &nbsp;·&nbsp; Upcoming · Razzmatazz · Basement · Lofi · Radion · Artheater · Dubai · Bozar · Nantes · Brussels · Tresor</div>
         </div>
       </div>
-      <div class="recap-row">
+      <div class="recap">
         <div class="recap-num">03</div>
         <div>
           <div class="recap-title" data-fr="Curation · Réseau d’artistes">Curation · Artist network</div>
-          <p class="recap-body" data-fr="Forte crédibilité, soutenue par les figures majeures des scènes techno et expérimentale globales.">Strong credibility supported by leading figures in global techno and experimental scenes.</p>
-          <div class="recap-tags">Featuring: Rødhåd · Steffi · Function · Polar Inertia · DJ Nobu · Speedy J · Efdemin · Regis · Rrose · Surgeon · Adriana Lopez — core artists Hadone &amp; UFO95</div>
+        </div>
+        <div class="recap-body">
+          <p data-fr="Forte crédibilité, soutenue par les figures majeures des scènes techno et expérimentale globales.">Strong credibility supported by leading figures in global techno and experimental scenes.</p>
+          <div class="recap-tags">Featuring · Rødhåd · Steffi · Function · Polar Inertia · DJ Nobu · Speedy J · Efdemin · Regis · Rrose · Surgeon · Adriana Lopez &nbsp;·&nbsp; Core · Hadone · UFO95</div>
         </div>
       </div>
     </div>
   </div>
   <div class="foot-bar">
-    <span data-fr="Une décennie de scène, une trajectoire qui s’accélère">A decade in the scene, a trajectory accelerating</span>
-    <span data-fr="01 — 02 — 03">01 — 02 — 03</span>
+    <span data-fr="Une décennie de scène, une trajectoire qui s’accélère.">A decade in the scene. A trajectory accelerating.</span>
+    <span>01 · 02 · 03</span>
   </div>
 </section>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗
-     ║ 04 · EVENT VISION / PRODUCTION                              ║
-     ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ─── 04 · EVENT VISION / PRODUCTION ────────────────────────── -->
 <section class="slide">
   <div class="meta-bar">
     <span data-fr="04 · Vision Événementielle · Production">04 · Event Vision · Production</span>
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>04 / 07</span>
   </div>
-  <div class="middle wide">
+  <div class="frame flush">
     <span class="kicker" data-fr="Au-delà du club">Beyond the club format</span>
     <h2 class="title-1" data-fr="Étendre l’expérience d’écoute.">Expanding the listening experience.</h2>
     <div class="media-split">
       <div class="copy">
-        <p class="body" data-fr="TSSRCT élargit son pôle événements et production au-delà du format club traditionnel : showcases, concerts, expériences hybrides dans des institutions culturelles comme Bozar.">TSSRCT aims to expand its event and production branch beyond the traditional club format, exploring formats from club showcases to concerts and hybrid experiences in cultural institutions such as Bozar.</p>
-        <p class="body" data-fr="L’objectif : construire une communauté dédiée à travers des expériences alternatives, des sessions ambient aux soirées multidisciplinaires, en engageant aussi bien le public historique que les nouveaux publics.">The goal is to build a dedicated community through alternative listening experiences — from ambient sessions to multidisciplinary events — engaging both core and new audiences.</p>
-        <p class="body" data-fr="Sous un à deux ans, TSSRCT vise des événements de grande envergure dans la lignée de Reaktor, Wall of Sound (DVS1) et Photon (Ben Klock), associant systèmes son avancés, curation forte et scénographie immersive pour une rave raffinée.">Within one to two years, TSSRCT aims to scale toward large-format events inspired by Reaktor, Wall of Sound by DVS1, and Photon by Ben Klock — combining advanced sound systems, strong curation, and immersive scenography for a refined rave experience.</p>
+        <p class="body" data-fr="TSSRCT élargit son pôle événements et production au-delà du format club traditionnel. Showcases, concerts, expériences hybrides dans des institutions culturelles comme Bozar.">TSSRCT aims to expand its event and production branch beyond the traditional club format. Club showcases, concerts, and hybrid experiences in cultural institutions such as Bozar.</p>
+        <p class="body" data-fr="L’objectif. Construire une communauté dédiée à travers des expériences alternatives, des sessions ambient aux soirées multidisciplinaires, en engageant aussi bien le public historique que les nouveaux publics.">The goal. Build a dedicated community through alternative listening experiences, from ambient sessions to multidisciplinary events, engaging both core and new audiences.</p>
+        <p class="body" data-fr="Sous un à deux ans, TSSRCT vise des événements de grande envergure dans la lignée de Reaktor, Wall of Sound (DVS1) et Photon (Ben Klock). Systèmes son avancés, curation forte, scénographie immersive pour une rave raffinée.">Within one to two years, TSSRCT aims to scale toward large-format events inspired by Reaktor, Wall of Sound by DVS1, and Photon by Ben Klock. Advanced sound systems, strong curation, immersive scenography for a refined rave experience.</p>
       </div>
       <div class="media-mosaic">
         <div class="media-cell" onclick="openMedia('image','images/event-bozar.jpg')">
@@ -219,34 +241,32 @@
           <span class="media-cell-label">Reaktor</span>
         </div>
         <div class="media-cell" onclick="openMedia('image','images/event-upstairs.jpg')">
-          <img src="images/event-upstairs.jpg" alt="Upstairs · Public Records" data-fr-alt="Upstairs · Public Records">
+          <img src="images/event-upstairs.jpg" alt="Public Records" data-fr-alt="Public Records">
           <span class="media-cell-label">Public Records</span>
         </div>
       </div>
     </div>
   </div>
   <div class="foot-bar">
-    <span data-fr="Du club au concert · de l’ambient à la rave">From club to concert · from ambient to rave</span>
+    <span data-fr="Du club au concert. De l’ambient à la rave.">From club to concert. From ambient to rave.</span>
     <span>Reaktor · Photon · Bozar</span>
   </div>
 </section>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗
-     ║ 05 · EXHIBITION / FASHION / DESIGN                          ║
-     ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ─── 05 · EXHIBITION / FASHION / DESIGN ───────────────────── -->
 <section class="slide">
   <div class="meta-bar">
     <span data-fr="05 · Exhibition · Mode · Design">05 · Exhibition · Fashion · Design</span>
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>05 / 07</span>
   </div>
-  <div class="middle wide">
+  <div class="frame flush">
     <span class="kicker" data-fr="Cross-disciplinaire">Cross-disciplinary</span>
     <h2 class="title-1" data-fr="Au-delà de la musique.">Beyond music.</h2>
     <div class="media-split">
       <div class="copy">
-        <p class="body" data-fr="TSSRCT se déploie au-delà de la musique vers la mode, l’art visuel et le design, en s’appuyant sur la connexion forte entre musique électronique et ces disciplines. L’objectif : se positionner comme partenaire créatif pour le licensing de catalogue et la composition sur-mesure pour les designers, réalisateurs et artistes.">TSSRCT aims to expand beyond music into fashion, visual art, and design, building on the strong connection between electronic music and these fields. The goal is to position the project as a creative partner for both catalogue licensing and tailored compositions for designers, filmmakers, and artists.</p>
+        <p class="body" data-fr="TSSRCT se déploie au-delà de la musique vers la mode, l’art visuel et le design, en s’appuyant sur la connexion forte entre musique électronique et ces disciplines. L’objectif&nbsp;: se positionner comme partenaire créatif pour le licensing de catalogue et la composition sur-mesure pour les designers, réalisateurs et artistes.">TSSRCT aims to expand beyond music into fashion, visual art, and design, building on the strong connection between electronic music and these fields. The goal: to position the project as a creative partner for catalogue licensing and tailored compositions for designers, filmmakers, and artists.</p>
         <p class="body" data-fr="Cette direction est déjà en cours, soutenue par un réseau qui inclut Aaron Fowler, Samuel De Gunzburg, Romain Petrot et Massine Benoukaci (Perrotin Dubaï).">This direction is already underway, supported by a network including Aaron Fowler, Samuel De Gunzburg, Romain Petrot, and Massine Benoukaci (Perrotin Dubai).</p>
-        <p class="body" data-fr="Le catalogue TSSRCT est connecté à l’écosystème sync via Syncsmith, qui collabore avec des marques comme Louis Vuitton et Prada — ouvrant des opportunités cross-industries.">TSSRCT's catalogue is also connected to the sync ecosystem through Syncsmith, working with brands such as Louis Vuitton and Prada, opening opportunities for collaborations and cross-industry projects.</p>
+        <p class="body" data-fr="Le catalogue TSSRCT est connecté à l’écosystème sync via Syncsmith, qui collabore avec des marques comme Louis Vuitton et Prada. Des opportunités cross-industries.">TSSRCT's catalogue is also connected to the sync ecosystem through Syncsmith, working with brands such as Louis Vuitton and Prada. Cross-industry opportunities.</p>
       </div>
       <div class="media-mosaic">
         <div class="media-cell span-2" onclick="openMedia('video','images/fashion-prada.mp4')">
@@ -257,79 +277,75 @@
           <img src="images/fashion-still.png" alt="Fashion still" data-fr-alt="Visuel mode">
           <span class="media-cell-label">Editorial</span>
         </div>
-        <div class="media-cell" onclick="openMedia('image','images/artwork-3.jpg')">
-          <img src="images/artwork-3.jpg" alt="TSSRCT artwork" data-fr-alt="Artwork TSSRCT">
+        <div class="media-cell" onclick="openMedia('image','images/release-essai.jpg')">
+          <img src="images/release-essai.jpg" alt="TSSRCT artwork" data-fr-alt="Artwork TSSRCT">
           <span class="media-cell-label">Artwork</span>
         </div>
       </div>
     </div>
   </div>
   <div class="foot-bar">
-    <span data-fr="Sync · Licensing · Collaborations sur-mesure">Sync · Licensing · Tailored collaborations</span>
+    <span data-fr="Sync · Licensing · Collaborations sur-mesure.">Sync · Licensing · Tailored collaborations.</span>
     <span>Syncsmith · Perrotin · LV · Prada</span>
   </div>
 </section>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗
-     ║ 06 · CV — UFO95 & HADONE                                    ║
-     ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ─── 06 · CV — UFO95 & HADONE ─────────────────────────────── -->
 <section class="slide">
   <div class="meta-bar">
     <span data-fr="06 · Hadone · UFO95">06 · Hadone · UFO95</span>
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>06 / 07</span>
   </div>
-  <div class="middle wide">
+  <div class="frame">
     <span class="kicker" data-fr="Les fondateurs">The founders</span>
-    <h2 class="title-1" data-fr="Deux artistes — une décennie de scène.">Two artists — a decade in the scene.</h2>
+    <h2 class="title-1" data-fr="Deux artistes.&nbsp;Une décennie de scène.">Two artists.&nbsp;A decade in the scene.</h2>
     <div class="cv-grid">
       <div class="cv-card">
         <div class="cv-name">HADONE</div>
         <div class="cv-role" data-fr="DJ · Producteur · Co-fondateur">DJ · Producer · Co-founder</div>
         <p class="cv-bio" data-fr="Figure incontournable de la scène techno européenne, Hadone façonne depuis plus de dix ans une signature sonore tranchante, jouée des sous-sols de Berlin aux institutions culturelles internationales.">A pillar of the European techno scene, Hadone has been shaping a sharp sonic signature for over ten years, playing from Berlin's underground to international cultural institutions.</p>
         <ul class="cv-list">
-          <li>Tresor · Berghain · Fuse · KALT</li>
-          <li>Releases — Khemia, Construct Re-Form, TSSRCT</li>
-          <li>Featured w/ Rødhåd · Steffi · Function</li>
+          <li data-k="Venues">Tresor · Berghain · Fuse · KALT</li>
+          <li data-k="Releases">Khemia · Construct Re-Form · TSSRCT</li>
+          <li data-k="Featured">Rødhåd · Steffi · Function</li>
         </ul>
         <a class="cv-link" href="https://www.instagram.com/hadone__/" target="_blank" rel="noopener">@hadone__</a>
       </div>
       <div class="cv-card">
         <div class="cv-name">UFO95</div>
         <div class="cv-role" data-fr="DJ · Producteur · Co-fondateur">DJ · Producer · Co-founder</div>
-        <p class="cv-bio" data-fr="Producteur prolifique entre techno, ambient et expérimental, UFO95 défend une vision musicale exigeante et hybride, à la croisée du club et de l’écoute attentive.">A prolific producer moving between techno, ambient, and experimental, UFO95 carries a demanding hybrid vision — at the intersection of the dancefloor and attentive listening.</p>
+        <p class="cv-bio" data-fr="Producteur prolifique entre techno, ambient et expérimental, UFO95 défend une vision musicale exigeante et hybride, à la croisée du club et de l’écoute attentive.">A prolific producer moving between techno, ambient, and experimental, UFO95 carries a demanding hybrid vision at the intersection of the dancefloor and attentive listening.</p>
         <ul class="cv-list">
-          <li>Bozar · Reaktor · Photon · BASIS</li>
-          <li>Releases — TSSRCT, Tresor, In Aeternam Vale</li>
-          <li>Featured w/ Polar Inertia · Speedy J · Surgeon</li>
+          <li data-k="Venues">Bozar · Reaktor · Photon · BASIS</li>
+          <li data-k="Releases">TSSRCT · Tresor · In Aeternam Vale</li>
+          <li data-k="Featured">Polar Inertia · Speedy J · Surgeon</li>
         </ul>
         <a class="cv-link" href="https://www.instagram.com/ufo95live/" target="_blank" rel="noopener">@ufo95live</a>
       </div>
     </div>
   </div>
   <div class="foot-bar">
-    <span data-fr="Légitimité artistique · capacité à passer à l’échelle">Artistic legitimacy · ability to scale</span>
+    <span data-fr="Légitimité artistique. Capacité à passer à l’échelle.">Artistic legitimacy. Ability to scale.</span>
     <span>HADONE × UFO95</span>
   </div>
 </section>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗
-     ║ 07 · CONTACT (outro)                                        ║
-     ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ─── 07 · CONTACT ─────────────────────────────────────────── -->
 <section class="slide">
   <div class="meta-bar">
     <span data-fr="07 · Contact">07 · Contact</span>
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>07 / 07</span>
   </div>
-  <div class="middle wide">
+  <div class="frame">
     <span class="kicker" data-fr="Travaillons ensemble">Let's work together</span>
-    <h2 class="display" data-fr="Discutons.">Let's talk.</h2>
+    <h2 class="display-2" data-fr="Discutons.">Let's talk.</h2>
     <div class="contact-grid">
       <div class="contact-col">
-        <span class="label" data-fr="Email">Email</span>
+        <span class="lab" data-fr="Email">Email</span>
         <div class="big"><a href="mailto:contact@example.com">contact@example.com</a></div>
       </div>
       <div class="contact-col">
-        <span class="label" data-fr="Réseaux">Socials</span>
+        <span class="lab" data-fr="Réseaux">Socials</span>
         <div class="big">
           <a href="https://www.instagram.com/tssrct_rec/" target="_blank" rel="noopener">@tssrct_rec</a><br>
           <a href="https://www.instagram.com/hadone__/" target="_blank" rel="noopener">@hadone__</a><br>
@@ -344,7 +360,7 @@
   </div>
   <div class="foot-bar">
     <span>TSSRCT · 2026</span>
-    <span data-fr="Hadone × UFO95">Hadone × UFO95</span>
+    <span>Hadone × UFO95</span>
   </div>
 </section>
 
