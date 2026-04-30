@@ -595,8 +595,9 @@ body.pdf-capture .nav-arrows { display: none !important; }
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
 }
+.cv-link:hover { opacity: 0.65; }
 @media (max-width: 900px) {
   .cv-grid { grid-template-columns: 1fr; }
 }
@@ -660,10 +661,6 @@ body.pdf-capture .nav-arrows { display: none !important; }
   border-right: 1px solid var(--line);
 }
 .biz-card:last-child { border-right: 0; }
-.biz-card--hero {
-  background: var(--ink);
-  color: var(--bg);
-}
 .biz-num {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -687,10 +684,9 @@ body.pdf-capture .nav-arrows { display: none !important; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.7;
-  border-top: 1px solid currentColor;
+  border-top: 1px solid var(--line);
   padding-top: 10px;
 }
-.biz-card--hero .biz-meta { border-top-color: rgba(255,255,255,0.35); }
 @media (max-width: 900px) {
   .biz-grid {
     grid-template-columns: 1fr;
@@ -749,11 +745,6 @@ body.pdf-capture .nav-arrows { display: none !important; }
   display: flex;
   flex-direction: column;
 }
-.comm-card--funnel {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
-}
 .comm-channel {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -786,7 +777,8 @@ body.pdf-capture .nav-arrows { display: none !important; }
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
-.contact-col a { border-bottom: 1px solid var(--ink); }
+.contact-col a { color: var(--ink); transition: opacity 0.15s; }
+.contact-col a:hover { opacity: 0.65; }
 .cta-bar {
   margin-top: 36px;
   padding: 16px 20px;
