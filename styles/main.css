@@ -420,8 +420,8 @@ body.pdf-capture .nav-arrows { display: none !important; }
   padding-top: 12px;
 }
 .vision-row p {
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: clamp(14px, 1.15vw, 17px);
+  line-height: 1.55;
 }
 .vision-row .num { padding-top: 1px; }
 @media (max-width: 900px) {
@@ -437,11 +437,12 @@ body.pdf-capture .nav-arrows { display: none !important; }
 }
 .recap {
   display: grid;
-  grid-template-columns: 60px 1.2fr 2fr;
+  grid-template-columns: 60px 1fr;
   gap: 24px;
-  padding: 18px 0;
+  padding: 22px 0 26px;
   border-bottom: 1px solid var(--line);
 }
+.recap-head { margin-bottom: 12px; }
 .recap-num {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -449,28 +450,170 @@ body.pdf-capture .nav-arrows { display: none !important; }
   color: var(--muted);
   padding-top: 4px;
 }
+/* Section label is small and muted — supporting metadata, not the headline */
 .recap-title {
-  font-size: clamp(20px, 2vw, 30px);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+}
+.recap-body p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-bottom: 10px;
+  max-width: 60ch;
+}
+/* The names (artists / venues) are the headline data of the slide.
+   Large, ink-coloured, set in the display family for visibility. */
+.recap-tags {
+  margin-top: 4px;
+  font-size: clamp(15px, 1.5vw, 20px);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.recap-tags strong {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  font-weight: 500;
+  margin: 6px 0 2px;
+}
+@media (max-width: 900px) {
+  .recap { grid-template-columns: 1fr; gap: 6px; }
+  .recap-body { grid-column: 1; }
+}
+
+/* ── KPI rows (used in slides 5 & 6 alongside body copy) ─────── */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.kpi { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.kpi-num {
+  font-size: clamp(16px, 1.6vw, 22px);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   line-height: 1;
 }
-.recap-body p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-.recap-tags {
-  margin-top: 10px;
+.kpi-lbl {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.4;
 }
 @media (max-width: 900px) {
-  .recap { grid-template-columns: 38px 1fr; }
-  .recap-body { grid-column: 2; }
+  .kpi-row { grid-template-columns: 1fr; gap: 10px; }
+}
+
+/* ── CV stats (slide 8 — 100k Spotify, +10M streams) ─────────── */
+.cv-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+.cv-stat-num {
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.cv-stat-lbl {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 8px;
+}
+@media (max-width: 900px) {
+  .cv-stats { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* ── Forecast table (slide 10) ───────────────────────────────── */
+.forecast {
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.forecast-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.forecast-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+.forecast-table th,
+.forecast-table td {
+  padding: 8px 6px;
+  text-align: right;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: middle;
+}
+.forecast-table th:first-child,
+.forecast-table td:first-child {
+  text-align: left;
+  white-space: nowrap;
+}
+.forecast-table th {
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+.forecast-table tr.forecast-total td {
+  border-bottom: 0;
+  border-top: 1px solid var(--line);
+  font-weight: 600;
+  color: var(--ink);
+  padding-top: 12px;
+}
+.forecast-table strong { font-weight: 700; }
+.forecast-note {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 70ch;
+}
+@media (max-width: 900px) {
+  .forecast-table { font-size: 10px; }
+  .forecast-table th,
+  .forecast-table td { padding: 6px 4px; }
 }
 
 /* ── 04 / 05 · Media split ─────────────────────────────────────
@@ -1091,9 +1234,10 @@ body.pdf-capture .nav-arrows { display: none !important; }
     padding: 14px 0;
   }
   .recap-num { padding-top: 0; font-size: 10px; }
-  .recap-title { font-size: clamp(18px, 5.4vw, 24px); }
+  .recap-title { font-size: 11px; letter-spacing: 0.2em; }
   .recap-body p { font-size: 13px; }
-  .recap-tags { font-size: 10px; line-height: 1.6; margin-top: 6px; }
+  .recap-tags { font-size: 15px; line-height: 1.4; margin-top: 4px; }
+  .recap-tags strong { font-size: 9px; letter-spacing: 0.2em; }
 
   /* ── 04/05 · Media split — stack copy then mosaic ────────── */
   .media-split {
