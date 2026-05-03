@@ -643,6 +643,23 @@ body.pdf-capture .nav-arrows { display: none !important; }
   min-height: 0;
   height: 100%;
 }
+/* Portrait variant — 2 vertical cells side by side, each cell tall.
+   Used on slide 6 (Community) where the source videos are 9:16. */
+.media-mosaic--portrait {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.media-mosaic--portrait .media-cell {
+  aspect-ratio: 9 / 16;
+  max-height: 100%;
+  margin-inline: auto;
+  width: auto;
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .media-mosaic--portrait { grid-template-columns: 1fr 1fr; }
+  .media-mosaic--portrait .media-cell { aspect-ratio: 9 / 16; }
+}
 .media-cell {
   position: relative;
   overflow: hidden;
