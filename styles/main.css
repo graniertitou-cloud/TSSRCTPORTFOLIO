@@ -75,6 +75,15 @@ html, body {
   -webkit-hyphens: none;
   white-space: normal;
 }
+
+/* Non-breaking utility — keep compound terms (Vent Tokyo, Reaktor-class,
+   100k, +10M, Hadone × UFO95) on the same line so the reader's eye doesn't
+   stumble on a half-word at the line break. */
+.nb { white-space: nowrap; }
+/* French typography: tight non-breaking thin space before colon, semi-colon,
+   question and exclamation marks is automatically handled by &nbsp; in copy.
+   This class is applied on phrases the designer wants to keep contiguous
+   regardless of column width. */
 img, video { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; cursor: pointer; }
