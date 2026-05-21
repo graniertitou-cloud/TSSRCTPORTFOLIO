@@ -32,14 +32,14 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; frame-src 'self'; connect-src 'self' https://api.web3forms.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self';">
 
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/main.css?v=5">
 
-<script defer src="scripts/i18n-theme.js"></script>
-<script defer src="scripts/lightbox.js"></script>
-<script defer src="scripts/contact-modal.js"></script>
-<script defer src="scripts/lazy-media.js"></script>
-<script defer src="scripts/slide-nav.js"></script>
-<script defer src="scripts/pdf-export.js"></script>
+<script defer src="scripts/i18n-theme.js?v=5"></script>
+<script defer src="scripts/lightbox.js?v=5"></script>
+<script defer src="scripts/contact-modal.js?v=5"></script>
+<script defer src="scripts/lazy-media.js?v=5"></script>
+<script defer src="scripts/slide-nav.js?v=5"></script>
+<script defer src="scripts/pdf-export.js?v=5"></script>
 
 <script>
 (function(){try{var t=localStorage.getItem('tssrct-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(_){}})();
@@ -107,7 +107,7 @@
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>01 / 11</span>
   </div>
   <div class="cover-frame">
-    <h1 class="cover-mark">TSSRCT</h1>
+    <h1 class="cover-mark" aria-label="TSSRCT"><span aria-hidden="true">T</span><span aria-hidden="true">S</span><span aria-hidden="true">S</span><span aria-hidden="true">R</span><span aria-hidden="true">C</span><span aria-hidden="true">T</span></h1>
     <p class="cover-meta" data-fr="Une plateforme multi&shy;disciplinaire qui dépasse les codes de la techno. Musique, art visuel, mode, design, technologie.">A multi&shy;disciplinary platform pushing beyond techno. Music, visual art, fashion, design, technology.</p>
     <div class="cover-side">
       <dl>
@@ -273,9 +273,7 @@
         <p class="body" data-fr="Pont direct vers le luxe via Syncsmith. Collaborations actives avec <span class='nb'>Louis Vuitton</span>, Prada et l’univers Perrotin (Aaron Fowler, <span class='nb'>Samuel De Gunzburg</span>, <span class='nb'>Romain Petrot</span>, <span class='nb'>Massine Benoukaci</span> · <span class='nb'>Perrotin Dubaï</span>).">Direct bridge to luxury via Syncsmith. Active collaborations with <span class="nb">Louis Vuitton</span>, Prada, and the Perrotin orbit (Aaron Fowler, <span class="nb">Samuel De Gunzburg</span>, <span class="nb">Romain Petrot</span>, <span class="nb">Massine Benoukaci</span> · <span class="nb">Perrotin Dubai</span>).</p>
         <p class="body" data-fr="Aux placements existants s’ajoutent les compositions sur-mesure pour designers, réalisateurs et artistes. Un produit haut de gamme, vendable plusieurs fois, qui scale avec le catalogue.">Beyond existing placements, tailored compositions for designers, filmmakers, and artists. A high-end product that resells across territories and scales with the catalogue.</p>
         <div class="kpi-row">
-          <div class="kpi"><div class="kpi-num">×</div><div class="kpi-lbl" data-fr="Marge logicielle · revenu récurrent">Software margin · recurring</div></div>
-          <div class="kpi"><div class="kpi-num">LV · Prada</div><div class="kpi-lbl" data-fr="Pont luxe via Syncsmith">Luxury bridge · Syncsmith</div></div>
-          <div class="kpi"><div class="kpi-num">∞</div><div class="kpi-lbl" data-fr="Réutilisable sans plafond">Catalogue compounds</div></div>
+          <div class="kpi"><div class="kpi-num">LV · Prada</div><div class="kpi-lbl" data-fr="En cours · via Syncsmith">Work in progress · via Syncsmith</div></div>
         </div>
       </div>
       <div class="media-mosaic">
@@ -393,15 +391,13 @@
   <div class="frame">
     <span class="kicker" data-fr="Les fondateurs · Reach">The founders · Reach</span>
     <h2 class="title-1" data-fr="Deux artistes.&nbsp;Une décennie de scène.">Two artists.&nbsp;A decade in the scene.</h2>
-    <div class="cv-stats">
-      <div class="cv-stat">
-        <div class="cv-stat-num">100k</div>
-        <div class="cv-stat-lbl" data-fr="Auditeurs mensuels Spotify">Monthly Spotify listeners</div>
-      </div>
-      <div class="cv-stat">
-        <div class="cv-stat-num">+10M</div>
-        <div class="cv-stat-lbl" data-fr="Streams toutes plateformes · Hadone &amp; UFO95">Streams across all platforms · Hadone &amp; UFO95</div>
-      </div>
+    <div class="cv-bar">
+      <span class="cv-bar-lbl" data-fr="TSSRCT · Métriques duo">TSSRCT · Duo metrics</span>
+      <span class="cv-bar-item"><b>100k</b><span data-fr="Spotify mensuel">Spotify monthly</span></span>
+      <span class="cv-bar-sep">/</span>
+      <span class="cv-bar-item"><b>+10M</b><span data-fr="Streams toutes plateformes">All-platform streams</span></span>
+      <span class="cv-bar-sep">/</span>
+      <span class="cv-bar-item" data-fr="Cumulés · Hadone + UFO95">Combined · Hadone + UFO95</span>
     </div>
     <div class="cv-grid">
       <div class="cv-card">
@@ -443,6 +439,33 @@
   <div class="frame">
     <span class="kicker" data-fr="Ce que nous cherchons · 2026">What we're looking for · 2026</span>
     <h2 class="title-1" data-fr="Notre demande.&nbsp;Trois places à prendre dans le vaisseau.">The ask.&nbsp;Three seats on the ship.</h2>
+    <div class="obj-stats">
+      <div class="obj-stat">
+        <div class="obj-stat-num">1.5M</div>
+        <div class="obj-stat-lbl" data-fr="Reach Instagram · mensuel">Instagram reach · monthly</div>
+        <div class="obj-stat-tag" data-fr="Déjà atteint">Already achieved</div>
+      </div>
+      <div class="obj-stat">
+        <div class="obj-stat-num">20+</div>
+        <div class="obj-stat-lbl" data-fr="Showcases internationaux · capacité 1K–5K">International showcases · 1K–5K capacity</div>
+        <div class="obj-stat-tag" data-fr="Cible">Target</div>
+      </div>
+      <div class="obj-stat">
+        <div class="obj-stat-num">5K</div>
+        <div class="obj-stat-lbl" data-fr="Capacité par événement">Per-event capacity</div>
+        <div class="obj-stat-tag" data-fr="Objectif">Goal</div>
+      </div>
+      <div class="obj-stat">
+        <div class="obj-stat-num">3</div>
+        <div class="obj-stat-lbl" data-fr="Continents · Europe · Amérique du Nord · Amérique du Sud">Continents · EU · North America · South America</div>
+        <div class="obj-stat-tag" data-fr="En développement">In development</div>
+      </div>
+      <div class="obj-stat">
+        <div class="obj-stat-num">Curated</div>
+        <div class="obj-stat-lbl" data-fr="Collaborations marques · sync sélectif">Brand collaborations · selected sync</div>
+        <div class="obj-stat-tag" data-fr="Actif · Syncsmith">Active · Syncsmith</div>
+      </div>
+    </div>
     <div class="ask-grid">
       <div class="ask-card">
         <div class="ask-num">01</div>
@@ -477,73 +500,74 @@
     <span><button class="dl-link" onclick="downloadPDF(this)" data-fr="↓ Télécharger">↓ Download</button>10 / 11</span>
   </div>
   <div class="frame">
-    <span class="kicker" data-fr="Sources de revenus · Prévisionnel 2026 · 2027">Revenue streams · Forecast 2026 · 2027</span>
-    <h2 class="title-1" data-fr="Roadmap financière.&nbsp;Trois flux, une rentabilité rapide.">Financial Roadmap.&nbsp;Three streams, a short runway to profit.</h2>
-    <div class="biz-grid">
-      <div class="biz-card">
-        <div class="biz-num">01</div>
-        <div class="biz-name" data-fr="Ticketing">Ticketing</div>
-        <p class="biz-body" data-fr="Événements hybrides à forte valeur ajoutée. Showcases curatés, club nights, formats <span class='nb'>Reaktor-class</span>. Marges solides sur des audiences ciblées.">Hybrid events with high added value. Curated showcases, club nights, <span class="nb">Reaktor-class</span> formats. Strong margins on targeted audiences.</p>
-        <div class="biz-meta">High-margin · Recurring</div>
+    <span class="kicker" data-fr="Comment on déploie le capital · Deux moteurs">How we deploy capital · Two engines</span>
+    <h2 class="title-1" data-fr="Roadmap financière.&nbsp;Deux moteurs, deux horizons.">Financial Roadmap.&nbsp;Two engines, two horizons.</h2>
+    <div class="dual-track">
+      <div class="track">
+        <div class="track-head">
+          <span class="track-num">A</span>
+          <div>
+            <div class="track-name" data-fr="Label">Label</div>
+            <div class="track-tag" data-fr="Long terme · Revenu récurrent">Long-term · Recurring revenue</div>
+          </div>
+          <span class="track-ask" data-fr="Offre sur demande">Offer on demand</span>
+        </div>
+        <div class="track-section">
+          <span class="track-section-lbl" data-fr="Capital déployé">Capital deployed to</span>
+          <ul>
+            <li data-fr="Studio · production des releases">Studio · release production</li>
+            <li data-fr="Marketing · PR · éditorial">Marketing · PR · editorial</li>
+            <li data-fr="Catalogue · A&amp;R · signings">Catalogue · A&amp;R · signings</li>
+            <li data-fr="Curation Sync · ops Syncsmith">Sync curation · Syncsmith ops</li>
+          </ul>
+        </div>
+        <div class="track-section">
+          <span class="track-section-lbl" data-fr="Retour sur investissement">Revenue back from</span>
+          <ul>
+            <li data-fr="Royalties streaming">Streaming royalties</li>
+            <li data-fr="Sync · marques de luxe (LV · Prada)">Sync · luxury brands (LV · Prada)</li>
+            <li data-fr="Licensing catalogue">Catalogue licensing</li>
+            <li data-fr="Compositions sur-mesure">Bespoke commissions</li>
+          </ul>
+        </div>
+        <div class="track-footer">
+          <span class="track-footer-num">12 – 36 months</span>
+          <span class="track-footer-lbl" data-fr="Courbe composée · marge qui scale avec le catalogue">Compounding curve · margin scales with catalogue</span>
+        </div>
       </div>
-      <div class="biz-card">
-        <div class="biz-num">02</div>
-        <div class="biz-name" data-fr="Licensing · Sync">Licensing · Sync</div>
-        <p class="biz-body" data-fr="Pont Syncsmith vers les marques (LV, Prada). Catalogue licensing + compositions sur-mesure. Revenu récurrent, marge logicielle.">Syncsmith bridge to brands (LV, Prada). Catalogue licensing + tailored compositions. Recurring revenue, software-grade margins.</p>
-        <div class="biz-meta">Recurring · LV · Prada · Syncsmith</div>
-      </div>
-      <div class="biz-card">
-        <div class="biz-num">03</div>
-        <div class="biz-name" data-fr="Digital Assets">Digital assets</div>
-        <p class="biz-body" data-fr="Monétisation via l’app Chanoirs et l’écosystème <span class='nb'>Digital AF</span>. Releases numériques, drops limités, accès communauté.">Monetization via the Chanoirs app and the <span class="nb">Digital AF</span> ecosystem. Digital releases, limited drops, community access tiers.</p>
-        <div class="biz-meta">Scalable · Owned audience</div>
+      <div class="track">
+        <div class="track-head">
+          <span class="track-num">B</span>
+          <div>
+            <div class="track-name" data-fr="Événementiel">Events</div>
+            <div class="track-tag" data-fr="Court terme · Cash rapide">Short-term · Fast cash return</div>
+          </div>
+          <span class="track-ask" data-fr="Offre sur demande">Offer on demand</span>
+        </div>
+        <div class="track-section">
+          <span class="track-section-lbl" data-fr="Capital déployé">Capital deployed to</span>
+          <ul>
+            <li data-fr="Showcases internationaux">Worldwide showcases</li>
+            <li data-fr="Listening events · sessions ambient">Listening events · ambient sessions</li>
+            <li data-fr="Format Reaktor-class · grande échelle">Reaktor-class · large format</li>
+            <li data-fr="Sound system · scénographie immersive">Sound system · immersive scenography</li>
+          </ul>
+        </div>
+        <div class="track-section">
+          <span class="track-section-lbl" data-fr="Retour sur investissement">Revenue back from</span>
+          <ul>
+            <li data-fr="Ticketing premium curaté">Premium curated ticketing</li>
+            <li data-fr="Sponsors marques · partenariats">Brand sponsors · partnerships</li>
+            <li data-fr="Hospitality · bar · merch">Hospitality · bar · merch</li>
+          </ul>
+        </div>
+        <div class="track-footer">
+          <span class="track-footer-num">0 – 6 months</span>
+          <span class="track-footer-lbl" data-fr="Payback à chaque événement · cash en sortie de show">Per-event payback · cash on show completion</span>
+        </div>
       </div>
     </div>
-    <div class="forecast">
-      <div class="forecast-head">
-        <span class="num">2026 · 2027</span>
-        <span class="forecast-title" data-fr="Prévisionnel · 2 events pilotes">Forecast · 2 pilot events</span>
-      </div>
-      <table class="forecast-table">
-        <thead>
-          <tr>
-            <th data-fr="Format">Format</th>
-            <th data-fr="Capacité">Capacity</th>
-            <th data-fr="Ticketing">Ticketing</th>
-            <th data-fr="Sponsors · Sync">Sponsors · Sync</th>
-            <th data-fr="Coût">Cost</th>
-            <th data-fr="Marge">Margin</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-fr="Techno · Reaktor-class"><span class="nb">Techno · Reaktor-class</span></td>
-            <td>1,500</td>
-            <td>€60k</td>
-            <td>€40k</td>
-            <td>€55k</td>
-            <td><strong>€45k</strong></td>
-          </tr>
-          <tr>
-            <td data-fr="Concert · Listening">Concert · Listening</td>
-            <td>600</td>
-            <td>€24k</td>
-            <td>€30k</td>
-            <td>€22k</td>
-            <td><strong>€32k</strong></td>
-          </tr>
-          <tr class="forecast-total">
-            <td data-fr="Total · 2 pilotes">Total · 2 pilots</td>
-            <td>2,100</td>
-            <td>€84k</td>
-            <td>€70k</td>
-            <td>€77k</td>
-            <td><strong>€77k</strong></td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="forecast-note" data-fr="Hypothèses prudentes. Rentabilité dès le premier événement grâce à la légitimité de la scène et à la communauté qualifiée. À horizon <span class='nb'>12–24 mois</span>, scale&nbsp;×3 visé via récurrence&nbsp;+ sync.">Conservative assumptions. Profitable from the first event thanks to scene legitimacy and qualified community. <span class="nb">12–24 month</span> horizon: 3× scale via recurrence + sync.</p>
-    </div>
+    <p class="dual-track-note" data-fr="Deux moteurs activables en parallèle ou séparément. À l’interlocuteur de choisir son horizon : capital patient sur le label, ou retour cash rapide sur l’événementiel.">Two engines, run in parallel or independently. Pick your horizon: patient capital on the label, or fast cash on events.</p>
   </div>
   <div class="foot-bar">
     <span data-fr="Marges récurrentes · Audience captive · Scale composé.">Recurring margins · Captive audience · Compounding scale.</span>
@@ -563,7 +587,7 @@
     <div class="contact-grid">
       <div class="contact-col">
         <span class="lab" data-fr="Email">Email</span>
-        <div class="big"><a href="mailto:contact@example.com">contact@example.com</a></div>
+        <div class="big"><a href="mailto:tssrctlab@gmail.com">tssrctlab@gmail.com</a></div>
       </div>
       <div class="contact-col">
         <span class="lab" data-fr="Réseaux">Socials</span>
@@ -576,7 +600,7 @@
     </div>
     <div class="cta-bar">
       <span class="cta-text" data-fr="Une collaboration en tête ?">A collaboration in mind?</span>
-      <button class="cta-btn" type="button" onclick="openContactModal()" data-fr="Nous contacter →">Contact us →</button>
+      <a class="cta-btn" href="mailto:tssrctlab@gmail.com" data-fr="Nous contacter →">Contact us →</a>
     </div>
   </div>
   <div class="foot-bar">

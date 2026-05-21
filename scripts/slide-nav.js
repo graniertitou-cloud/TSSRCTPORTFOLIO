@@ -7,7 +7,7 @@
   let slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
   let prevBtn = document.getElementById('nav-prev');
   let nextBtn = document.getElementById('nav-next');
-  let current = 0;
+  let current = -1;
 
   function updateButtons() {
     prevBtn.disabled = (current <= 0);
@@ -21,11 +21,33 @@
     updateButtons();
   }
 
+  let coverMark = document.querySelector('.cover-mark');
+  function retriggerCoverStrobe() {
+    if (!coverMark) return;
+    coverMark.classList.remove('is-strobing');
+    void coverMark.offsetWidth; /* force reflow so the animation restarts */
+    coverMark.classList.add('is-strobing');
+  }
+  /* Guarantee strobe fires on every page load (covers hard refresh) */
+  if (coverMark) {
+    requestAnimationFrame(retriggerCoverStrobe);
+    window.addEventListener('load', retriggerCoverStrobe);
+  }
+  /* Click anywhere on the cover slide replays the strobe */
+  if (slides[0]) {
+    slides[0].addEventListener('click', function(e) {
+      if (e.target.closest('button, a, input, textarea, [contenteditable]')) return;
+      retriggerCoverStrobe();
+    });
+  }
+
   /* Track visible slide as user scrolls manually */
   let io = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
       if (e.isIntersecting && e.intersectionRatio > 0.5) {
-        current = slides.indexOf(e.target);
+        let idx = slides.indexOf(e.target);
+        if (idx === 0 && current !== 0) retriggerCoverStrobe();
+        current = idx;
         updateButtons();
       }
     });
