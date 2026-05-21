@@ -388,6 +388,32 @@ body.pdf-capture .nav-arrows { display: none !important; }
   letter-spacing: -0.06em;
   line-height: 0.82;
   text-transform: uppercase;
+  animation: tssrct-strobe-in 1.6s steps(1, end) 0.25s 1 both;
+}
+@keyframes tssrct-strobe-in {
+  0%   { opacity: 0; }
+  4%   { opacity: 1; }
+  8%   { opacity: 0; }
+  14%  { opacity: 1; }
+  19%  { opacity: 0; }
+  24%  { opacity: 1; }
+  30%  { opacity: 0; }
+  35%  { opacity: 1; }
+  41%  { opacity: 0; }
+  47%  { opacity: 1; }
+  53%  { opacity: 0; }
+  59%  { opacity: 1; }
+  64%  { opacity: 0; }
+  70%  { opacity: 1; }
+  76%  { opacity: 0; }
+  82%  { opacity: 1; }
+  86%  { opacity: 0; }
+  92%  { opacity: 1; }
+  95%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover-mark { animation: none; }
 }
 .cover-meta {
   grid-column: 1 / span 6;
