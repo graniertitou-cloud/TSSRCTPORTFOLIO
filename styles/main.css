@@ -1586,9 +1586,163 @@ body.pdf-capture .nav-arrows { display: none !important; }
 /* iPad / small tablet (769–1024px). Two-column layouts hold but
    typography is dialled back so it doesn't crowd. */
 @media (min-width: 769px) and (max-width: 1024px) {
-  :root { --pad-x: 36px; }
+  :root { --pad-x: 36px; --pad-y: 32px; --gutter: 18px; }
   .display-1 { font-size: clamp(72px, 12vw, 132px); }
   .title-1   { font-size: clamp(30px, 4.6vw, 56px); }
+  .body, .body--lead { font-size: 14px; line-height: 1.55; }
+
+  /* Slide 02 / 04 / 05 — media split: shrink the mosaic so copy breathes */
+  .media-split { grid-template-columns: 1.05fr 0.95fr; gap: 28px; }
+  .media-split .copy p { font-size: 13.5px; }
+
+  /* Slide 06 — portrait mosaic */
+  .media-mosaic--portrait .media-cell { aspect-ratio: 9 / 16; max-height: 80vh; }
+
+  /* Slide 07 — tech grid */
+  .tech-grid { gap: 16px 24px; }
+
+  /* Slide 08 — duo metrics bar */
+  .cv-bar { padding: 22px 22px; font-size: 14px; gap: 16px; }
+  .cv-bar-lbl { font-size: 13px; }
+  .cv-bar-item b { font-size: 26px; }
+  .cv-bar-sep { font-size: 18px; }
+
+  /* Slide 08 — CV grid keeps 2 cols but tighter */
+  .cv-grid { gap: 28px; }
+  .cv-name { font-size: clamp(48px, 6vw, 72px); }
+  .cv-list { font-size: 14px; }
+
+  /* Slide 09 — Strategic Objectives: 5-col KPI strip + 3-col ask grid */
+  .obj-stats { grid-template-columns: repeat(5, 1fr); gap: 14px; padding: 14px 0 16px; }
+  .obj-stat-num { font-size: clamp(22px, 2.8vw, 32px); }
+  .obj-stat-lbl { font-size: 11px; }
+  .obj-stat-tag { font-size: 8px; letter-spacing: 0.22em; }
+  .ask-grid { gap: 18px; }
+
+  /* Slide 10 — Dual track: 2 cols but tighter padding + smaller list */
+  .track { padding: 16px 18px 16px 0; gap: 12px; }
+  .track + .track { padding: 16px 0 16px 18px; }
+  .track-name { font-size: clamp(26px, 3.2vw, 38px); }
+  .track-section ul { font-size: 13px; line-height: 1.5; }
+  .track-ask { font-size: 9px; padding: 4px 7px; }
+
+  /* Slide 11 — contact */
+  .contact-col .big { font-size: clamp(22px, 3vw, 32px); }
+}
+
+/* iPad portrait + medium tablets (769–900px). Some 2-col layouts get
+   cramped; switch to single-column where it helps readability. */
+@media (min-width: 769px) and (max-width: 900px) {
+  /* Dual track stacks — cleaner reading flow on portrait iPad */
+  .dual-track { grid-template-columns: 1fr; }
+  .track { padding: 18px 0; }
+  .track + .track { padding: 18px 0 0; border-left: none; border-top: 1px solid var(--line); margin-top: 4px; }
+
+  /* Ask grid: 3 → 2 cols */
+  .ask-grid { grid-template-columns: 1fr 1fr; }
+  .ask-card:last-child { grid-column: 1 / -1; }
+
+  /* Obj stats: 5 → 3+2 cols pattern via wrap-friendly grid */
+  .obj-stats { grid-template-columns: repeat(3, 1fr); gap: 14px 18px; }
+}
+
+/* ── Safe-area insets (iPhone notch / home indicator) ────────── */
+@supports (padding: max(0px)) {
+  .meta-bar { padding-top: env(safe-area-inset-top, 0px); }
+  .foot-bar { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .nav-arrows {
+    right: max(22px, env(safe-area-inset-right, 22px));
+    bottom: max(22px, env(safe-area-inset-bottom, 22px));
+  }
+  .slide {
+    padding-left: max(var(--pad-x), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--pad-x), env(safe-area-inset-right, 0px));
+  }
+}
+
+/* ── Mobile fine-tuning: touch targets + new components ──────── */
+@media (max-width: 768px) {
+  /* Bigger touch targets per Apple HIG (≥44×44 px) */
+  .nav-arrow { width: 44px; height: 44px; font-size: 18px; opacity: 0.7; }
+  .nav-arrows { gap: 4px; }
+  .dl-link { padding: 6px 4px; margin-right: 6px; }
+  .theme-toggle { width: 28px; height: 28px; padding: 8px; margin-right: 6px; }
+  .lang-toggle { padding: 6px 4px; margin-right: 6px; }
+
+  /* Tap highlight cleanup */
+  a, button { -webkit-tap-highlight-color: rgba(0,0,0,0.08); }
+
+  /* Slide 08 — cv-bar wraps to multi-line, readable */
+  .cv-bar { padding: 16px 16px; gap: 10px 14px; font-size: 13px; line-height: 1.4; }
+  .cv-bar-lbl {
+    flex: 1 1 100%;
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+  .cv-bar-item b { font-size: 20px; }
+
+  /* Slide 09 — KPI strip becomes 1 col on very narrow */
+  .obj-stats { padding: 14px 0 16px; }
+  .obj-stat { padding: 4px 0; border-bottom: 1px solid var(--hair); }
+  .obj-stat:last-child { border-bottom: none; }
+  .obj-stat-num { margin-bottom: 4px; }
+
+  /* Slide 10 — dual track stacks (handled in main 900px breakpoint already);
+     re-ensure here for clarity. Track-ask badge stacks below the name on tiny screens */
+  .track-head { gap: 10px; }
+  .track-ask { width: 100%; margin-left: 0; text-align: center; margin-top: 4px; }
+
+  /* Slide 02 / 04 / 05 — caps mosaic height so copy stays visible above the fold */
+  .media-split { grid-template-rows: auto minmax(180px, 34vh); }
+
+  /* Cover slide — 6 letters of TSSRCT must fit on smallest screens */
+  .cover-mark { font-size: clamp(64px, 19vw, 120px); letter-spacing: -0.05em; }
+
+  /* Modals — full-bleed pattern (better keyboard handling) */
+  .modal-overlay { padding: 16px; align-items: flex-end; }
+  .modal-box { width: 100%; max-width: 100%; max-height: 88svh; overflow-y: auto; }
+  .pdf-loading {
+    left: 16px; right: 16px; bottom: 16px;
+    top: auto; transform: none;
+    width: auto; max-width: 100%;
+  }
+
+  /* Lightbox controls — easier to tap on phones */
+  .lightbox-nav { width: 48px; height: 48px; font-size: 28px; }
+  .lightbox-close { width: 48px; height: 48px; font-size: 24px; }
+
+  /* Slide 11 — contact CTA: easier mailto tap */
+  .contact-col .big a { display: inline-block; padding: 4px 0; }
+}
+
+/* ── Very small phones (≤380px): density rescue ──────────────── */
+@media (max-width: 380px) {
+  :root { --pad-x: 16px; }
+  .slide { padding: 48px var(--pad-x) 48px; }
+  .meta-bar, .foot-bar { font-size: 8px; letter-spacing: 0.12em; }
+  .title-1 { font-size: clamp(24px, 7.8vw, 38px); }
+  .cv-name { font-size: clamp(32px, 10vw, 48px); }
+  .cv-bar { padding: 14px 12px; gap: 8px 12px; font-size: 12px; }
+  .cv-bar-item b { font-size: 18px; }
+  .obj-stat-num { font-size: 22px; }
+  .obj-stat-lbl { font-size: 10px; }
+}
+
+/* ── Landscape phones: keep height usable ────────────────────── */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+  .slide { min-height: 100svh; padding: 32px var(--pad-x); }
+  .frame { padding: 18px 0 14px; }
+  .meta-bar { top: 10px; }
+  .foot-bar { bottom: 10px; }
+  .title-1 { font-size: clamp(22px, 4.2vh, 32px); }
+  .cover-mark { font-size: clamp(48px, 14vh, 96px); }
+  .cv-bar { padding: 10px 14px; font-size: 11px; }
+  .cv-bar-item b { font-size: 16px; }
 }
 
 /* ── PDF capture neutralizer ─────────────────────────────────── */
